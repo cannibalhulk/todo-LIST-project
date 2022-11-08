@@ -24,15 +24,27 @@ input.addEventListener('keyup',()=>{
 
 addBtn.addEventListener('click',()=>{
     if(input.value.trim() != 0){
-        let newItem=document.createElement('div')
-        newItem.classList.add('tasks');
-        newItem.innerHTML = `
-        <div class="item">
-          <p>${input.value}</p>
-          <i class="fa-solid fa-circle-xmark"></i>
-        </div>`;
+        let divParent= document.createElement('div');
+        let divChild= document.createElement('div');
+        let p = document.createElement('p');
+        let deleteIcon = document.createElement('i');
 
-        tasks.appendChild(newItem);
+        divParent.className="tasks";
+        divChild.className="item";
+        p.innerHTML=`${input.value}`;
+        deleteIcon.classList="fa-solid fa-circle-xmark";
+        divChild.appendChild(p);
+        divChild.appendChild(deleteIcon);
+
+
+        //delete task from the list;
+        deleteIcon.addEventListener('click',function(){
+            divParent.remove();
+        })
+
+        divParent.appendChild(divChild);
+
+        tasks.appendChild(divParent);
         input.value='';
     }
 
@@ -41,14 +53,4 @@ addBtn.addEventListener('click',()=>{
     }
 })
 
-//delete item from  the list
-
-itemBox.addEventListener('click',(e)=>{
-    let target = e.target;
-    if(target.classList.contains('fa-circle-xmark')){
-        let item = target.parentElement.parentElement;
-        item.remove();
-    }
-
-});
 
