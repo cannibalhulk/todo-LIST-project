@@ -1,0 +1,131 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.todo-box {
+    box-shadow: 3px 4px 30px rgba(138, 138, 138, 0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 460px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.colored {
+  height: 30px;
+  background-color: #f6ae2d;
+}
+
+.task-section {
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.task-section h1 {
+  margin-top: -10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.task-section i {
+  font-size: 22px;
+  cursor: pointer;
+  /* margin-left: 6em; */
+}
+
+.task-section .sort-icon {
+  margin-left: 8em;
+  padding-bottom: 7px;
+}
+
+.list-head {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.list-head .add-list {
+  margin-left: 35px;
+  width: 35px;
+  padding: 3px;
+  background-color: #33658a;
+  border-radius: 50%;
+  margin-top: 4px;
+  transition: 0.3s;
+  opacity: .6;
+  pointer-events: none;
+}
+
+.add-list.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+.list-head div:hover {
+  background-color: #2f4858;
+  transition: 0.3s;
+}
+
+.list-head i {
+  padding: 6px 8px;
+  color: #fff;
+}
+
+.entered-list {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 4px;
+  width: 300px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.tasks {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 284px;
+  margin-top: 10px;
+  margin-left: -76px;
+  padding: 0px 13px;
+}
+
+.tasks .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item p {
+  font-size: large;
+}
+
+.item  i {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #33658a;
+  transition: 0.3s;
+}
+
+.item i:hover {
+  color: #2f4858;
+  transition: 0.3s;
+}
+
+.item i:first-child {
+  margin-right: 3px;
+}
