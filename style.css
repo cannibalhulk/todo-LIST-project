@@ -46,10 +46,17 @@ body {
   /* margin-left: 6em; */
 }
 
-.task-section .sort-icon {
+.task-section .sort-icon-down {
   margin-left: 8em;
   padding-bottom: 7px;
 }
+
+.task-section .sort-icon-up {
+  display: none;
+  margin-left: 8em;
+  padding-bottom: 7px;
+}
+
 
 .list-head {
   display: grid;
@@ -128,4 +135,8 @@ body {
 
 .item i:first-child {
   margin-right: 3px;
+}
+
+.icon-none{
+  display: none;
 }
